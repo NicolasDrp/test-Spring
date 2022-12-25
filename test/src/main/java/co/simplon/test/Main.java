@@ -9,13 +9,13 @@ import co.simplon.test.model.Test;
 import co.simplon.test.service.BusinessService;
 
 @SpringBootApplication
-public class TestApplication implements CommandLineRunner {
+public class Main implements CommandLineRunner {
 
 	@Autowired
 	private BusinessService bs;
 	
 	public static void main(String[] args) {
-        SpringApplication.run(TestApplication.class, args);
+        SpringApplication.run(Main.class, args);
     }
 
 
@@ -23,7 +23,6 @@ public class TestApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		Test tset = bs.getTest();
 		System.out.println(tset);
-		
 	}
 	
 }
